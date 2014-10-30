@@ -25,3 +25,8 @@ Route::get('spellbook', function()
 {
     return View::make('spells');
 });
+
+Route::get('sheet', function()
+{
+    return View::make('charsheet');
+});

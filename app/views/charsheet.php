@@ -2,10 +2,14 @@
 <html ng-app="charSheet">
 
     <head>
-        <link rel="stylesheet" type="text/css" href="../vendor/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="index.css" />
-        <script type="text/javascript" src="../vendor/angular.min.js"></script>
-        <script type="text/javascript" src="app.js"></script>
+        <title>Spellbook</title>
+        <link rel="stylesheet" type="text/css" href="<?= asset('css/bootstrap.min.css'); ?>" />
+        <link rel="stylesheet" type="text/css" href="<?= asset('css/charsheet.css'); ?>" />
+        <script type="text/javascript" src="<?= asset('js/angular.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?= asset('js/ngStorage.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?= asset('js/select.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?= asset('js/angular-sanitize.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?= asset('js/charsheet.js'); ?>"></script>
     </head>
 
     <body class="container-fluid" ng-controller="SheetController as sheet">
