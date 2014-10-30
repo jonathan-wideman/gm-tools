@@ -26,6 +26,10 @@
 }
 
 
+.jw-row-underline {
+    border-bottom: 1px solid #ecf0f1;
+}
+
 .jw-panel {
     position: relative;
     border: 1px solid #ecf0f1;
@@ -88,6 +92,10 @@
 
 .jw-text-stat {
     font-weight: bold;
+}
+.jw-text-stat-sm {
+    font-weight: bold;
+    font-size: 75%;
 }
 .jw-text-stat-lg {
     font-weight: bold;
