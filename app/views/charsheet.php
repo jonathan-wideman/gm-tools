@@ -2,7 +2,7 @@
 <html ng-app="charSheet">
 
     <head>
-        <title>Spellbook</title>
+        <title>Character Sheet</title>
         <link rel="stylesheet" type="text/css" href="<?= asset('css/bootstrap.min.css'); ?>" />
         <link rel="stylesheet" type="text/css" href="<?= asset('css/charsheet.css'); ?>" />
         <script type="text/javascript" src="<?= asset('js/angular.min.js'); ?>"></script>
