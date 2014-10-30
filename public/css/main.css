@@ -1,0 +1,25 @@
+.background {
+    background: #355;
+}
+
+.card {
+    /*margin: 5px;*/
+    padding: 25px;
+
+    background: #ffe;
+    box-shadow: 10px 10px 8px 0px #222;
+}
+
+.spell-section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.center-horiz {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.value-static {
+    color: grey;
+}
