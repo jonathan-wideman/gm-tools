@@ -1,0 +1,119 @@
+minimum functinal product:
+
+
+    - step 1: Display
+        - display all info on sheet
+            - info shown should match DnD 5e sheet
+                - available from:
+                    http://dnd.wizards.com/articles/features/character_sheets
+                - use the sheet that looks like this:
+                    http://media.wizards.com/images/dnd/articles/5E_CharacterSheetv4.png
+        - initial layout
+            - layout should mimic DnD 5e sheet (as above)
+        - create floating navbar (initially empty)
+
+
+    - step 2: Editing
+        - phase i) Edit Mode
+            - add 'edit' button to navbar
+                - toggleable
+                - while editing
+                    - display 'editing' status message adjacent to button
+                    - button label becomes 'Done'
+            - ALL values that are not labels should be editable
+                - while editing
+                    - text stat values should be visible
+                    - inputs should be visible
+                - while not editing
+                    - text stat values should be hidden
+                    - inputs should be hidden
+        - phase ii) Character Object
+            - create character object
+                - represent ALL stats and values displayed on sheet
+                - create Value Objects (DDD principle) where feasible and timely
+                    - eg, could create Value Object for a skill, with properties:
+                        - name
+                        - proficient
+                        - ability
+                        - value
+                        - modifiers (eg. situational or class feature modifiers)
+            - link inputs to character object via ng-model
+        - phase iii) Improvements
+            - add simple ease-of-use controls
+                - use <input type="number" ...> for numeric inputs
+                    - this should add increment/decrement spinners automatically
+            - add simple validation (numeric vs. text) where applicable (if feasible)
+                - main purpose should be to prevent invalid input at this point
+                - don't worry about prettiness of validation message
+                - just provide simple visible feedback like input turning red
+                - list (in documentation) inputs that are not feasible to validate now
+            - add 'modifier' filter (if feasible)
+                - displays a '+' symbol if value >= 0
+                - displays a '-' symbol if value < 0
+                - (if feasible) should be visible while editing
+                    - make sure it does not convert inputs to strings
+
+
+    - step 3: Saving/Loading
+        - phase i) Buttons and Stubs
+            - add 'save' button to navbar
+                - create stub save function (log to console or alert)
+            - add 'load' button to navbar
+                - create stub load function (log to console or alert)
+        - phase ii) Service
+            - create angular service to handle saving/load
+        - phase iii) Framework
+            - actually pick a framework to handle html requests
+                - basic php ?
+                - laravel ?
+                - nodejs ?
+        - phase iv) Implementation
+            - implement save & load
+            - use default OS file menus
+            - save as .json for now (probably easiest to parse)
+            - remember to add proper save/load/character management later
+
+
+    - step 4: Calculated Values
+        - follow the DnD 5e Basic Rules available here:
+            http://dnd.wizards.com/articles/features/basicrules
+        - phase i) Planning
+            - document all values that are static
+                - (ie. editable during character creation)
+            - document all values that are dynamic
+                - (ie. editable post character creation)
+            - document all values that are formulaic
+                - (ie. they are dependant on other values)
+                - document pseudocode formulas for these values
+        - phase ii) Implement
+            - implement formulas for formulaic values
+            - link formulas to appropriate inputs
+        - phase iii) New Modes
+            - change 'edit' button to toggle between modes:
+                - 'view'; 'create'; 'play'
+                - should probably figure out better way to toggle 'create' mode
+            - show/hide inputs based on mode
+                - 'view' mode
+                    - static inputs hidden
+                    - dynamic inputs hidden
+                - 'create' mode
+                    - static inputs visible
+                    - dynamic inputs visible
+                - 'play' mode
+                    - static inputs hidden
+                    - dynamic inputs visible
+
+
+feature ideas:
+    - highlight related stats on hover:
+        - option one:
+            green - uses hovered stat
+            blue - used in hovered stat
+            - change alpha based on degree of seperation:
+                ~ 70% - immediate
+                ~ 40% - secondary or more
+        - option two:
+            - also display formula on hover
+            - pick colors for each var in formula
+            - higlight those vars on page and in formula
+            - higlight secondary as above?

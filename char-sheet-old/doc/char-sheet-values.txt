@@ -1,0 +1,133 @@
+char sheet
+
+- character sheet
+    ============================================================(page 1)
+    - name
+    - classes
+        - class
+        - level
+    - race
+    - background
+    - alignment
+        - law vs chaos
+        - good vs evil
+    - xp
+    - player
+        - name
+    - attributes
+        - str
+            - val
+            - mod
+        - dex
+            - val
+            - mod
+        - con
+            - val
+            - mod
+        - int
+            - val
+            - mod
+        - wis
+            - val
+            - mod
+        - cha
+            - val
+            - mod
+    - inspiration
+    - proficiency
+    - passive perception
+    - passive investigation
+    - save proficiency
+        - str
+        - dex
+        - con
+        - int
+        - wis
+        - cha
+    - skill proficiency
+        - acrobatics            (Dex)
+        - animal handling       (Wis)
+        - arcana                (Int)
+        - athletics             (Str)
+        - deception             (Cha)
+        - history               (Int)
+        - insight               (Wis)
+        - intimidation          (Cha)
+        - investigation         (Int)
+        - medicine              (Wis)
+        - nature                (Int)
+        - percetion             (Wis)
+        - performance           (Cha)
+        - persuasion            (Cha)
+        - religion              (Int)
+        - sleight of hand       (Dex)
+        - stealth               (Dex)
+        - survival              (Wis)
+    - weapon proficiences
+    - armor proficiences
+    - tool proficiencies
+    - other proficiencies?
+    - languages
+    - armor class
+    - initiative
+    - speed
+    - hit points
+        - max
+        - current
+        - temp
+    - hit dice
+        - total
+            - value
+            - size
+        - remaining
+            - value
+            - size
+    - death saves
+        - successes
+        - failures
+    - attacks & casting
+        - attack
+            - name
+            - bonus
+            - damage
+                - amount
+                - type
+        - notes
+    - equipment
+    - money
+        - cp
+        - sp
+        - ep
+        - gp
+        - pp
+    - personality
+        - traits
+        - ideals
+        - bonds
+        - flaws
+    - features & traits
+    ============================================================(page 2)
+    - name
+    - age
+    - height
+    - weight
+    - eyes
+    - skin
+    - hair
+    - appearance
+    - backstory
+    - allies & orgs
+    - additional features & traits
+    - treasure
+    ============================================================(page 3)
+    - spellcasting class
+    - spellcating ability
+    - spell save dc
+    - spell attack bonus
+    - spells known (spell lists)
+        - spell level
+        - slots total
+        - slots expended
+        - spells
+            - prepared
+            - name
