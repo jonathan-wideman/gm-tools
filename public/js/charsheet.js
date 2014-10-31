@@ -7,7 +7,12 @@
         this.skills = skills;
         this.saves = saves;
         this.boxStats = boxStats;
+        this.editButtonText = "Edit Sheet";
         this.debugArea = false;
+        this.editing = false;
+
+        // Function Declarations
+        this.toggleEditMode = toggleEditMode;
     });
 
     app.filter('capitalize', function() {
@@ -67,5 +72,14 @@
         { name: 'Speed', abbreviation: 'Spd', value: '30ft'},
     ];
 
+    toggleEditMode = function() {
+        if (this.editing == false) {
+            this.editButtonText = "Save Changes";
+            this.editing = true;
+        } else {
+            this.editButtonText = "Edit Sheet";
+            this.editing = false;
+        }
+    };
 
 })();
