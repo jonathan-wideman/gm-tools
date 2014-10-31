@@ -11,22 +11,22 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', function () {
+    return View::make('hello');
 });
 
-Route::get('users', function()
-{
+Route::get('users', function () {
     return View::make('users');
 });
 
-Route::get('spellbook', function()
-{
+Route::get('spellbook', function () {
     return View::make('spells');
 });
 
-Route::get('sheet', function()
-{
+Route::get('sheet', function () {
     return View::make('charsheet');
+});
+
+Route::get('sheet2', function () {
+    return View::make('charsheet2');
 });

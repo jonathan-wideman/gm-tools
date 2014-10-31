@@ -83,7 +83,17 @@
 
 }
 
-
+.kc-stat-box-tall-gem-editing {
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+    height: 30px;
+    width:  45px;
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+    background-color: #fff;
+    text-align: center;
+}
 
 
 .jw-text-stat {
