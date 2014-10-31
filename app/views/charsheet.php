@@ -112,6 +112,28 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row" ng-repeat="line in sheet.equipment">
+                                <span class="col-md-11 jw-row-underline">{{line}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'equipment' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row">
+                                <span class="col-md-11 jw-row-underline"><span ng-repeat="item in sheet.coins">{{item.amount}} {{item.abbreviation}} </span></span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'coinage' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- /column -->
 

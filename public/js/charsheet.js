@@ -13,6 +13,8 @@
         this.bonds = bonds;
         this.flaws = flaws;
         this.features = features;
+        this.equipment = equipment;
+        this.coins = coins;
         this.boxStats = boxStats;
         this.debugArea = false;
     });
@@ -117,6 +119,30 @@
         'L',
         'M',
     ];
+
+    var equipment = [
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+        'F',
+        'G',
+        'H',
+        'I',
+        'J',
+        'K',
+        'L',
+        'M',
+    ]
+
+    var coins = [
+        { name: 'Copper Pieces',        abbreviation: 'CP',  amount: '10' },
+        { name: 'Silver Pieces',        abbreviation: 'SP',  amount: '10' },
+        { name: 'Electrum Pieces',      abbreviation: 'EP',  amount: '10' },
+        { name: 'Gold Pieces',          abbreviation: 'GP',  amount: '10' },
+        { name: 'Platinum Pieces',      abbreviation: 'PP',  amount: '10' },
+    ]
 
     var stats = [
         { name: 'Inspiration', abbreviation: '?', value: '1'},
