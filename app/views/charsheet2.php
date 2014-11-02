@@ -13,15 +13,81 @@
     </head>
 
     <body class="container-fluid" ng-controller="SheetController as sheet">
-        <div id="sheet-controls">
-            <br/>
-            <button ng-click="sheet.toggleEditMode()">{{sheet.editButtonText}}</button>
-            <br/>
+        <div>
+            <div id="char-info-header" >
 
+                <br/>
+                <input ng-model="charName" type="text" class="form-control" style="width: 300px; height: 30px">
+                Character Name
+
+
+                <div id='section1'>
+                    <br/>
+                    Level
+                        <select
+                            ng-init="charLevel = sheet.levels[0]"
+                            ng-model="charLevel"
+                            ng-options="level for level in sheet.levels">
+                        </select>
+                    Class
+                        <select
+                            ng-model="charClass"
+                            ng-options="class.name for class in sheet.p_classes">
+                            <option value="" ng-if="!charClass">Select Class</option>
+                        </select>
+                    <br/>
+                    <br/>
+                    Race
+
+                    <select
+                        ng-model="charRace"
+                        ng-options=" race.subrace + ' ' + race.name for race in sheet.races">
+                        <option value="" ng-if="!charRace">Select Race</option>
+                    </select>
+                    <br/>
+                    <br/>
+                 </div>
+
+                 <div id='section2' >
+                    <input ng-model="charBackground" class="form-control" style="width: 100px; height: 30px">
+                    Background
+                    <br/>
+
+
+                        <select
+                            ng-model="charAlignment"
+                            ng-options="alignment.name for alignment in sheet.alignments"
+                            style="margin-top: 15px">
+                            <option value="" ng-if="!charAlignment">Select Alignment</option>
+                        </select>
+                        <br/>
+                        Alignment
+                    <br/>
+                    <br/>
+                </div>
+
+                <div id='section3' >
+                    <input ng-model="charPlayer"type="text" class="form-control" style="width: 100px; height: 30px">
+                    Player Name
+                    <br/>
+                    <br/>
+                    <input ng-model="charExpPoints"type="text" class="form-control" style="width: 100px; height: 30px; margin-top: 5px;">
+                    Experience Points
+                    <br/>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="sheet-controls" >
+            <br/>
+            <button class="pull-right" ng-click="sheet.toggleEditMode()">{{sheet.editButtonText}}</button>
+            <br/>
             <hr/>
         </div>
 
-        <div class="row">
+        <div class="row" stlye="position:absolute; top: 500px">
             <!-- left column -->
             <div ng-class="{'jw-debug-area': sheet.debugArea}" class="col-md-4">
 
