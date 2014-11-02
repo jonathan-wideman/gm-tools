@@ -13,6 +13,7 @@
         this.bonds = bonds;
         this.flaws = flaws;
         this.features = features;
+        this.attacks = attacks;
         this.equipment = equipment;
         this.coins = coins;
         this.boxStats = boxStats;
@@ -119,6 +120,14 @@
         'L',
         'M',
     ];
+
+    var attacks = [
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+    ]
 
     var equipment = [
         'A',

@@ -115,6 +115,17 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="jw-panel">
+                            <div class="row" ng-repeat="line in sheet.attacks">
+                                <span class="col-md-11 jw-row-underline">{{line}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'attacks & spellcasting' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
                             <div class="row" ng-repeat="line in sheet.equipment">
                                 <span class="col-md-11 jw-row-underline">{{line}}</span>
                             </div>
