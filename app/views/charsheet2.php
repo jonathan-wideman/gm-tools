@@ -13,15 +13,81 @@
     </head>
 
     <body class="container-fluid" ng-controller="SheetController as sheet">
-        <div id="sheet-controls">
-            <br/>
-            <button ng-click="sheet.toggleEditMode()">{{sheet.editButtonText}}</button>
-            <br/>
+        <div>
+            <div id="char-info-header" >
 
+                <br/>
+                <input ng-model="charName" ng-disabled="!sheet.editing" type="text" class="form-control" style="width: 300px; height: 30px">
+                Character Name
+
+                <div id='section1'>
+                    <br/>
+                    Level
+                        <select
+                            ng-disabled="!sheet.editing"
+                            ng-init="charLevel = sheet.levels[0]"
+                            ng-model="charLevel"
+                            ng-options="level for level in sheet.levels">
+                        </select>
+                    Class
+                        <select
+                            ng-disabled="!sheet.editing"
+                            ng-model="charClass"
+                            ng-options="class.name for class in sheet.p_classes">
+                            <option value="" ng-if="!charClass">Select Class</option>
+                        </select>
+                    <br/>
+                    <br/>
+                    Race
+                    <select
+                        ng-disabled="!sheet.editing"
+                        ng-model="charRace"
+                        ng-options=" race.subrace + ' ' + race.name for race in sheet.races">
+                        <option value="" ng-if="!charRace">Select Race</option>
+                    </select>
+                    <br/>
+                    <br/>
+                 </div>
+
+                 <div id='section2' >
+                    <input ng-disabled="!sheet.editing" ng-model="charBackground" class="form-control" style="width: 100px; height: 30px">
+                    Background
+                    <br/>
+                        <select
+                            ng-disabled="!sheet.editing"
+                            ng-model="charAlignment"
+                            ng-options="alignment.name for alignment in sheet.alignments"
+                            style="margin-top: 15px">
+                            <option value="" ng-if="!charAlignment">Select Alignment</option>
+                        </select>
+                        <br/>
+                        Alignment
+                    <br/>
+                    <br/>
+                </div>
+
+                <div id='section3' >
+                    <input ng-disabled="!sheet.editing" ng-model="charPlayer"type="text" class="form-control" style="width: 100px; height: 30px">
+                    Player Name
+                    <br/>
+                    <br/>
+                    <input ng-disabled="!sheet.editing" ng-model="charExpPoints"type="text" class="form-control" style="width: 100px; height: 30px; margin-top: 5px;">
+                    Experience Points
+                    <br/>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="sheet-controls" >
+            <br/>
+            <button class="pull-right" ng-click="sheet.toggleEditMode()">{{sheet.editButtonText}}</button>
+            <br/>
             <hr/>
         </div>
 
-        <div class="row">
+        <div class="row" stlye="position:absolute; top: 500px">
             <!-- left column -->
             <div ng-class="{'jw-debug-area': sheet.debugArea}" class="col-md-4">
 
@@ -57,7 +123,8 @@
                         <div class="row" ng-repeat="stat in sheet.stats">
                             <div class="col-md-12">
                                 <div class="jw-stat-key-bulb">
-                                    <span class="center-block text-center jw-stat-key-bulb-value jw-text-stat">{{stat.value}}</span>
+                                    <span class="center-block text-center
+                                        jw-stat-key-bulb-value jw-text-stat">{{stat.value}}</span>
                                 </div>
                                 <div class="jw-stat-key-trunk">
                                     <span class="center-block text-center jw-stat-key-trunk-label jw-text-label">{{stat.name}}</span>
@@ -67,7 +134,7 @@
 
                         <div class="jw-panel">
                             <div class="row" ng-repeat="save in sheet.saves">
-                                <input class="col-md-2" type="checkbox" value="">
+                                <input ng-disabled="!sheet.editing" class="col-md-2" type="checkbox" value="">
                                 <span class="col-md-1 jw-text-stat">{{save.value}}</span>
                                 <span class="col-md-8 jw-text-label">{{save.name | capitalize}}</span>
                             </div>
@@ -76,7 +143,7 @@
 
                         <div class="jw-panel">
                             <div class="row" ng-repeat="skill in sheet.skills">
-                                <input class="col-md-2" type="checkbox" value="">
+                                <input ng-disabled="!sheet.editing" class="col-md-2" type="checkbox" value="">
                                 <span class="col-md-1 jw-text-stat">{{skill.value}}</span>
                                 <span class="col-md-2 jw-text-label-grey">({{skill.ability | capitalize}})</span>
                                 <span class="col-md-6 jw-text-label">{{skill.name | capitalize}}</span>

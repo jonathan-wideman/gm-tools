@@ -6,10 +6,25 @@
         this.stats = stats;
         this.skills = skills;
         this.saves = saves;
+        this.levels = levels;
+        this.p_classes = p_classes;
+        this.races = races;
+        this.alignments = alignments;
         this.boxStats = boxStats;
         this.editButtonText = "Edit Sheet";
         this.debugArea = false;
         this.editing = false;
+
+        this.charName = null;
+        this.charLevel = null;
+        this.charClass = null;
+        this.charRace = null;
+        this.charBackground = null;
+        this.charAlignment = null;
+        this.charPlayer = null;
+        this.charExpPoints = null;
+
+
 
         // Function Declarations
         this.toggleEditMode = toggleEditMode;
@@ -37,7 +52,7 @@
         { name: 'Intelligence',     value: 2 },
         { name: 'Wisdom',           value: 2 },
         { name: 'Charisma',         value: 2 },
-    ]
+    ];
 
     var skills = [
         { name: 'acrobatics',       ability: 'dex',     value: 2 },
@@ -58,7 +73,7 @@
         { name: 'sleight of hand',  ability: 'dex',     value: 2 },
         { name: 'stealth',          ability: 'dex',     value: 2 },
         { name: 'survival',         ability: 'wis',     value: 2 },
-    ]
+    ];
 
     var stats = [
         { name: 'Inspiration', abbreviation: '?', value: '1'},
@@ -70,6 +85,60 @@
         { name: 'Armor Class', abbreviation: 'AC', value: '14'},
         { name: 'Initiative', abbreviation: 'Init', value: '+2'},
         { name: 'Speed', abbreviation: 'Spd', value: '30ft'},
+    ];
+
+    var levels = [
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+        11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+    ];
+
+    var p_classes = [
+        {name: 'Barbarian'},
+        {name: 'Bard'},
+        {name: 'Cleric'},
+        {name: 'Druid'},
+        {name: 'Fighter'},
+        {name: 'Monk'},
+        {name: 'Paladin'},
+        {name: 'Ranger'},
+        {name: 'Rogue'},
+        {name: 'Sorcerer'},
+        {name: 'Warlock'},
+        {name: 'Wizard'}
+
+    ];
+
+    var races = [
+        {name: 'Dragonborn', subrace:''},
+        {name: 'Dwarf', subrace:''},
+        {name: 'Dwarf', subrace:'Hill'},
+        {name: 'Dwarf', subrace:'Mountain'},
+        {name: 'Elf', subrace:''},
+        {name: 'Elf', subrace:'High'},
+        {name: 'Elf', subrace:'Wood'},
+        {name: 'Elf', subrace:'Dark (Drow)'},
+        {name: 'Gnome', subrace:''},
+        {name: 'Gnome', subrace:'Forest'},
+        {name: 'Gnome', subrace:'Rock'},
+        {name: 'Halfling', subrace:''},
+        {name: 'Halfling', subrace:'Lightfoot'},
+        {name: 'Halfling', subrace:'Stout'},
+        {name: 'Half-Elf', subrace:''},
+        {name: 'Half-Orc', subrace:''},
+        {name: 'Human', subrace:''},
+        {name: 'Tiefling', subrace:''}
+    ];
+
+    var alignments = [
+        {name: 'Lawful Good'},
+        {name: 'Neutral Good'},
+        {name: 'Chaotic Good'},
+        {name: 'Lawful Neutral'},
+        {name: 'Neutral'},
+        {name: 'Chaotic Neutral'},
+        {name: 'Lawful Evil'},
+        {name: 'Neutral Evil'},
+        {name: 'Chaotic Evil'}
     ];
 
     toggleEditMode = function() {
