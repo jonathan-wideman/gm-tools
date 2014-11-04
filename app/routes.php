@@ -34,3 +34,7 @@ Route::get('sheet2', function () {
 Route::get('test-material', function () {
     return View::make('test-material');
 });
+
+Route::get('statList', function () {
+    return View::make('statList');
+});
