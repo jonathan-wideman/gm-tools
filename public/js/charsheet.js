@@ -10,6 +10,16 @@
         this.p_classes = p_classes;
         this.races = races;
         this.alignments = alignments;
+        this.proficiencies = proficiencies;
+        this.languages = languages;
+        this.traits = traits;
+        this.ideals = ideals;
+        this.bonds = bonds;
+        this.flaws = flaws;
+        this.features = features;
+        this.attacks = attacks;
+        this.equipment = equipment;
+        this.coins = coins;
         this.boxStats = boxStats;
         this.editButtonText = "Edit Sheet";
         this.debugArea = false;
@@ -74,6 +84,94 @@
         { name: 'stealth',          ability: 'dex',     value: 2 },
         { name: 'survival',         ability: 'wis',     value: 2 },
     ];
+
+    var proficiencies = [
+        'armor A',
+        'weapon 1',
+        'weapon 2',
+        'weapon 3',
+        'weapon 4',
+        'tool I',
+        'tool II',
+    ];
+
+    var languages = [
+        'language A',
+        'language B',
+        'language C',
+    ];
+
+    var traits = [
+        'blah',
+        'blah blah',
+        'halb!',
+    ];
+
+    var ideals = [
+        'blah',
+        'blah blah',
+        'halb!',
+    ];
+
+    var bonds = [
+        'blah',
+        'blah blah',
+        'halb!',
+    ];
+
+    var flaws = [
+        'blah',
+        'blah blah',
+        'halb!',
+    ];
+
+    var features = [
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+        'F',
+        'G',
+        'H',
+        'I',
+        'J',
+        'K',
+        'L',
+        'M',
+    ];
+
+    var attacks = [
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+    ]
+
+    var equipment = [
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+        'F',
+        'G',
+        'H',
+        'I',
+        'J',
+        'K',
+        'L',
+        'M',
+    ]
+
+    var coins = [
+        { name: 'Copper Pieces',        abbreviation: 'CP',  amount: '10' },
+        { name: 'Silver Pieces',        abbreviation: 'SP',  amount: '10' },
+        { name: 'Electrum Pieces',      abbreviation: 'EP',  amount: '10' },
+        { name: 'Gold Pieces',          abbreviation: 'GP',  amount: '10' },
+        { name: 'Platinum Pieces',      abbreviation: 'PP',  amount: '10' },
+    ]
 
     var stats = [
         { name: 'Inspiration', abbreviation: '?', value: '1'},
