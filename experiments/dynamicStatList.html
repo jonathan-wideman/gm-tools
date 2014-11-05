@@ -1,0 +1,42 @@
+<div ng-show="false">
+            <h1>Test</h1>
+
+            <div ng-repeat="item in statList.items" layout="horizontal" layout-align="start center">
+                <md-text-float label="{{item.name}}" type="{{item.type}}" ng-model="item.value"></md-text-float>
+                [<a href ng-click="statList.items.splice($index, 1)">X</a>]
+            </div>
+            <hr/>
+            <div layout="horizontal" layout-align="start center">
+                <md-text-float label="Name" type="text" ng-model="newItem.name"></md-text-float>
+                <select ng-init="newItem.type = 'text'" ng-model="newItem.type" required="true">
+                    <option value="text">Text</option>
+                    <option value="number">Number</option>
+                    <option value="checkbox">Bool</option>
+                </select>
+                [<a href ng-click="statList.items.push({ name: newItem.name, type: newItem.type, value: ((newItem.type == 'text') ? '' : (newItem.type == 'number') ? 0 : (newItem.type == 'checkbox') ? false : null)})">+</a>]
+            </div>
+
+
+            <hr/>
+
+
+
+            <h1>Stats</h1>
+
+            <!-- <span>STR: {{statList.groups.abilities.stats.strength.value}}</span> -->
+
+            <div ng-repeat="group in statList.groups">
+                <h2>{{group.heading}}</h2>
+                <div ng-repeat="stat in group.stats">
+                    <!-- <span>{{stat.label}}</span>
+                    <input
+                        type="{{stat.type}}"
+                        class="form-control input-sm"
+                        ng-model="stat.value"
+                    > -->
+                    <md-text-float label="{{stat.label}}" type="{{stat.type}}" ng-model="stat.value"></md-text-float>
+                </div>
+            </div>
+
+            <!-- <input type="number" class="form-control input-sm" ng-model="supply.amount"> -->
+        </div>
