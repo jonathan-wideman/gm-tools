@@ -78,6 +78,24 @@
                 </div>
                 <!-- /section -->
 
+                <!-- lower section -->
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row" ng-repeat="prof in sheet.proficiencies">
+                                <span class="col-md-11 jw-row-underline">{{prof}}</span>
+                            </div>
+                            <div class="row" ng-repeat="lang in sheet.languages">
+                                <span class="col-md-11 jw-row-underline">{{lang}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'other proficiencies & languanges' | uppercase}}</div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /section -->
+
             </div>
             <!-- /column -->
 
@@ -94,12 +112,100 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row" ng-repeat="line in sheet.attacks">
+                                <span class="col-md-11 jw-row-underline">{{line}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'attacks & spellcasting' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row" ng-repeat="line in sheet.equipment">
+                                <span class="col-md-11 jw-row-underline">{{line}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'equipment' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row">
+                                <span class="col-md-11 jw-row-underline"><span ng-repeat="item in sheet.coins">{{item.amount}} {{item.abbreviation}} </span></span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'coinage' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- /column -->
 
 
             <!-- right column -->
             <div ng-class="{'jw-debug-area': sheet.debugArea}" class="col-md-4">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row" ng-repeat="line in sheet.traits">
+                                <span class="col-md-11 jw-row-underline">{{line}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'personality traits' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row" ng-repeat="line in sheet.ideals">
+                                <span class="col-md-11 jw-row-underline">{{line}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'ideals' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row" ng-repeat="line in sheet.bonds">
+                                <span class="col-md-11 jw-row-underline">{{line}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'bonds' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row" ng-repeat="line in sheet.flaws">
+                                <span class="col-md-11 jw-row-underline">{{line}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'flaws' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jw-panel">
+                            <div class="row" ng-repeat="line in sheet.features">
+                                <span class="col-md-11 jw-row-underline">{{line}}</span>
+                            </div>
+                            <div class="jw-panel-label-bottom jw-text-label text-center">{{ 'features & traits' | uppercase}}</div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <!-- /column -->
