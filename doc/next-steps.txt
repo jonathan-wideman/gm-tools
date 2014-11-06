@@ -1,0 +1,7 @@
+next steps
+
+Jon:
+    - big list of editable values
+    - plan out character object model
+    - play with angular material
+    - begin sheet layout design concepts
