@@ -6,10 +6,6 @@
         this.stats = stats;
         this.skills = skills;
         this.saves = saves;
-        this.levels = levels;
-        this.p_classes = p_classes;
-        this.races = races;
-        this.alignments = alignments;
         this.proficiencies = proficiencies;
         this.languages = languages;
         this.traits = traits;
@@ -20,6 +16,10 @@
         this.attacks = attacks;
         this.equipment = equipment;
         this.coins = coins;
+        this.levels = levels;
+        this.p_classes = p_classes;
+        this.races = races;
+        this.alignments = alignments;
         this.boxStats = boxStats;
         this.editButtonText = "Edit Sheet";
         this.debugArea = false;
