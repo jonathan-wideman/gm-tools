@@ -44,9 +44,14 @@
             char.features = {};
             char.features.racial = [];
             char.features.class = [];
+            char.features.additional = [];
+            char.allies = [];
+            char.treasure = [];
         "></div>
 
         <h1>Stat List</h1>
+
+        <h2>Charsheet pg. 1</h2>
         <ul>
             <li>name <input type="text" ng-model="char.name"></li>
             <li>classes:</li>
@@ -363,6 +368,59 @@
                 </li>
             </ul>
         </ul>
+
+        <h2>Charsheet pg. 2</h2>
+        <ul>
+            <li>age <input type="number" ng-model="char.age"></li>
+            <li>height <input type="number" ng-model="char.height"></li>
+            <li>weight <input type="number" ng-model="char.weight"></li>
+            <li>eyes <textarea type="text" ng-model="char.eyes"></textarea></li>
+            <li>skin <textarea type="text" ng-model="char.skin"></textarea></li>
+            <li>hair <textarea type="text" ng-model="char.hair"></textarea></li>
+            <li>appearance <textarea type="text" ng-model="char.appearance"></textarea></li>
+            <li>backstory <textarea type="text" ng-model="char.backstory"></textarea></li>
+            <li>allies & organizations:</li>
+            <ul>
+                <li ng-repeat="ally in char.allies">
+                    name <input type="text" ng-model="ally.name">
+                    notes <textarea type="text" ng-model="ally.notes"></textarea>
+                    [<a href ng-click="char.allies.splice($index, 1)">X</a>]
+                </li>
+                <li>
+                    [<a href ng-click="
+                        char.allies.push({ name: null, notes: null });
+                    ">add</a>]
+                </li>
+            </ul>
+            <li>additional features & traits:</li>
+            <ul>
+                <li ng-repeat="feature in char.features.additional">
+                    name <input type="text" ng-model="feature.name">
+                    notes <textarea type="text" ng-model="feature.notes"></textarea>
+                    [<a href ng-click="char.features.additional.splice($index, 1)">X</a>]
+                </li>
+                <li>
+                    [<a href ng-click="
+                        char.features.additional.push({ name: null, notes: null });
+                    ">add</a>]
+                </li>
+            </ul>
+            <li>treasure:</li>
+            <ul>
+                <li ng-repeat="item in char.treasure">
+                    name <input type="text" ng-model="item.name">
+                    notes <textarea type="text" ng-model="item.notes"></textarea>
+                    [<a href ng-click="char.treasure.splice($index, 1)">X</a>]
+                </li>
+                <li>
+                    [<a href ng-click="
+                        char.treasure.push({ name: null, notes: null });
+                    ">add</a>]
+                </li>
+            </ul>
+        </ul>
+
+
     </div>
 
     <script src="<?= asset('bower_components/angular/angular.js'); ?>"></script>
