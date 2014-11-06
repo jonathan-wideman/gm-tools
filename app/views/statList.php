@@ -16,6 +16,7 @@
     <div ng-controller="StatListController as statList">
 
         <div ng-init="
+            spellLevels = [0,1,2,3,4,5,6,7,8,9];
             char = {};
             char.classes = [];
             char.alignment = {};
@@ -47,6 +48,7 @@
             char.features.additional = [];
             char.allies = [];
             char.treasure = [];
+            char.casterClasses = [];
         "></div>
 
         <h1>Stat List</h1>
@@ -419,6 +421,56 @@
                 </li>
             </ul>
         </ul>
+
+        <h2>Charsheet pg. 3</h2>
+
+        <ul>
+            <li>spellcasting classes:</li>
+            <ul ng-repeat="caster in char.casterClasses">
+                <li>spellcasting class:</li>
+                <li>
+                    name <input type="text" ng-model="caster.name">
+                    ability
+                    <select ng-model="caster.ability">
+                        <option value="int">Intelligence</option>
+                        <option value="wis">Wisdom</option>
+                        <option value="cha">Charisma</option>
+                    </select>
+                    save DC <input type="number" ng-model="caster.saveDc">
+                    attack modifier <input type="number" ng-model="caster.attackModifier">
+                    [<a href ng-click="char.casterClasses.splice($index, 1)">X</a>]
+                </li>
+                <li>spells:</li>
+                <ul ng-repeat="level in spellLevels">
+                    <li>level {{level}}: <span ng-show="level == 0"> ( cantrips )</span></li>
+                    <ul>
+                        <li ng-hide="level == 0">
+                            expended slots <input type="number" ng-model="spell.expendedSlots">
+                            total slots <input type="number" ng-model="spell.totalSlots">
+                        </li>
+                        <li ng-repeat="spell in caster.spellsByLevel[level]">
+                            name <input type="text" ng-model="spell.name">
+                            <small>prep?</small> <input type="checkbox" ng-model="spell.prepared">
+                            notes <textarea type="text" ng-model="spell.notes"></textarea>
+                            [<a href ng-click="caster.spellsByLevel[level].splice($index, 1)">X</a>]
+                        </li>
+                        <li>
+                            [<a href ng-click="
+                                caster.spellsByLevel[level].push({ name: null, notes: null });
+                            ">add</a>]
+                        </li>
+                    </ul>
+                </ul>
+            </ul>
+            <ul>
+                <li>
+                    [<a href ng-click="
+                        char.casterClasses.push({ spellsByLevel: [ [], [], [], [], [], [], [], [], [], [] ] });
+                    ">add</a>]
+                </li>
+            </ul>
+        </ul>
+
 
 
     </div>
