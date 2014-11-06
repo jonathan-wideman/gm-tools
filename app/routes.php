@@ -30,3 +30,7 @@ Route::get('sheet', function () {
 Route::get('sheet2', function () {
     return View::make('charsheet2');
 });
+
+Route::get('test-material', function () {
+    return View::make('test-material');
+});
